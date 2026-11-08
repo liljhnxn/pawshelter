@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PawShelter — Technical Whitepaper</title>
+  <style>
+    :root {
+      --cream-50: #FDFBF7;
+      --cream-100: #F7F3EA;
+      --forest-900: #102117;
+      --forest-800: #1E3A2B;
+      --forest-700: #2D5A3F;
+      --warm-brown: #8B5E3C;
+      --terracotta: #E07A5F;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Georgia, serif;
+      background: var(--cream-50);
+      color: var(--forest-900);
+      line-height: 1.7;
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 840px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 60px 50px;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(30,58,43,0.06);
+      border: 1px solid #EFE8DA;
+    }
+    .header {
+      border-bottom: 2px solid #EFE8DA;
+      padding-bottom: 30px;
+      margin-bottom: 40px;
+    }
+    .badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      background: #EBF3ED;
+      color: var(--forest-800);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+    h1 {
+      font-size: 36px;
+      color: var(--forest-800);
+      margin-bottom: 8px;
+      line-height: 1.2;
+    }
+    .tagline {
+      font-size: 20px;
+      color: var(--terracotta);
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+    .meta {
+      font-size: 13px;
+      color: #6B4D36;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    h2 {
+      font-size: 24px;
+      color: var(--forest-800);
+      margin: 36px 0 16px 0;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #EFE8DA;
+    }
+    h3 {
+      font-size: 18px;
+      color: var(--forest-700);
+      margin: 20px 0 10px 0;
+    }
+    p {
+      margin-bottom: 16px;
+      color: #332B25;
+      font-size: 15px;
+    }
+    ul, ol {
+      margin: 0 0 20px 24px;
+      color: #332B25;
+      font-size: 15px;
+    }
+    li { margin-bottom: 8px; }
+    pre {
+      background: #FAF7F2;
+      border: 1px solid #E2CFBC;
+      border-radius: 12px;
+      padding: 18px;
+      overflow-x: auto;
+      font-family: monospace;
+      font-size: 13px;
+      margin-bottom: 20px;
+      color: var(--forest-900);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 14px;
+    }
+    th, td {
+      padding: 10px 14px;
+      text-align: left;
+      border: 1px solid #E2CFBC;
+    }
+    th {
+      background: var(--forest-800);
+      color: #fff;
+    }
+    tr:nth-child(even) { background: #FAF7F2; }
+    .print-btn {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--forest-800);
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 9999px;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    .print-btn:hover { background: var(--forest-700); }
+    @media print {
+      body { background: #fff; padding: 0; }
+      .container { border: none; box-shadow: none; padding: 0; max-width: 100%; }
+      .print-btn { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="header">
+      <span class="badge">🐾 Technical Whitepaper v1.0</span>
+      <h1>PawShelter: Decentralized Pet Adoption Registry</h1>
+      <div class="tagline">"Every Paw Deserves a Home."</div>
+      <div class="meta">
+        <span><strong>Network:</strong> Botchain Testnet (Chain ID 968)</span>
+        <span>•</span>
+        <span><strong>Contract:</strong> 0x4Dc528244A916a8ed887D2F5d22a0500237aA7cb</span>
+        <span>•</span>
+        <span><strong>GitHub:</strong> liljhnxn/pawshelter</span>
+      </div>
+    </div>
+
+    <h2>1. Executive Summary</h2>
+    <p>Every year, over 6.3 million companion animals enter shelters in the United States alone. Traditional adoption systems suffer from centralized gatekeeping, high administrative overhead, fragmented record-keeping, and widespread pet scams.</p>
+    <p><strong>PawShelter</strong> provides a decentralized public registry on Botchain where every listing, adoption expression of interest, owner approval, and finalized adoption is immutably recorded on-chain without intermediaries, databases, or speculative tokens.</p>
+
+    <h2>2. Problem Statement</h2>
+    <ul>
+      <li><strong>Opaque Intermediaries:</strong> Traditional pet listing platforms charge adoption fees and lock adoption history inside closed proprietary servers.</li>
+      <li><strong>Adoption Fraud & Scams:</strong> Classified websites have no cryptographic verification, leading to thousands of online deposit scams and illegal pet-flipping.</li>
+      <li><strong>Speculative Distraction in Web3:</strong> Previous blockchain pet projects treated animals as speculative NFTs or yield tokens rather than solving real-world welfare problems.</li>
+    </ul>
+
+    <h2>3. The PawShelter Solution</h2>
+    <p>PawShelter introduces an on-chain state machine for pet adoption:</p>
+    <pre>
+[Owner Lists Pet] ──> Status: Available
+       │
+       ▼
+[Adopter Applies]  ──> AdoptionInterest Recorded On-Chain
+       │
+       ▼
+[Owner Approves]   ──> Status: Pending (Locked to Approved Adopter)
+       │
+       ▼
+[Milestone Done]   ──> Status: Adopted (Permanent Historical Record)
+    </pre>
+
+    <h2>4. Technical Specifications</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Specification</th>
+          <th>Implementation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Blockchain</td>
+          <td>Botchain Testnet (Chain ID 968, RPC: https://rpc.bohr.life)</td>
+        </tr>
+        <tr>
+          <td>Smart Contract</td>
+          <td>PawShelter.sol (Solidity ^0.8.20, optimizer 200 runs)</td>
+        </tr>
+        <tr>
+          <td>Contract Address</td>
+          <td>0x4Dc528244A916a8ed887D2F5d22a0500237aA7cb</td>
+        </tr>
+        <tr>
+          <td>Frontend Stack</td>
+          <td>Next.js 14 App Router, TypeScript, Tailwind CSS, wagmi v2, viem</td>
+        </tr>
+        <tr>
+          <td>Security & Tests</td>
+          <td>17 passing unit tests (self-adoption prevention, single approval, access controls)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>5. Security & Access Control</h2>
+    <p>The contract strictly adheres to Checks-Effects-Interactions (CEI). Listing owners cannot apply to adopt their own pets. Once an adopter is approved, no other applicant can be approved concurrently. Adoptions can only be finalized by either the listing owner or the verified approved applicant.</p>
+
+    <h2>6. Conclusion</h2>
+    <p>PawShelter demonstrates that blockchain ledgers can solve real-world animal welfare coordination problems through transparency and trustlessness.</p>
+    <p style="font-weight: 700; color: var(--forest-700);">Every Paw Deserves a Home.</p>
+  </div>
+
+  <button class="print-btn" onclick="window.print()">🖨️ Print / Save as PDF</button>
+
+</body>
+</html>

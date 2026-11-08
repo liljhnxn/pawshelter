@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PawShelter — Pitch Deck</title>
+  <style>
+    :root {
+      --cream-50: #FDFBF7;
+      --cream-100: #F7F3EA;
+      --forest-900: #102117;
+      --forest-800: #162D21;
+      --forest-700: #1E3A2B;
+      --forest-600: #2D5A3F;
+      --warm-brown: #8B5E3C;
+      --terracotta: #E07A5F;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--forest-900);
+      color: var(--forest-900);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      overflow-x: hidden;
+      padding: 20px;
+    }
+    .deck-container {
+      width: 100%;
+      max-width: 960px;
+      aspect-ratio: 16 / 9;
+      background: var(--cream-50);
+      border-radius: 24px;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.4);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      padding: 48px;
+    }
+    .slide {
+      display: none;
+      flex-direction: column;
+      height: 100%;
+      animation: fadeIn 0.3s ease-in-out;
+    }
+    .slide.active { display: flex; }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      background: #EBF3ED;
+      color: var(--forest-700);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      width: fit-content;
+    }
+    h1 {
+      font-size: 42px;
+      font-weight: 900;
+      color: var(--forest-800);
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+    h2 {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--forest-800);
+      margin-bottom: 16px;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--warm-brown);
+      margin-bottom: 16px;
+    }
+    .accent { color: var(--terracotta); }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      flex: 1;
+      align-items: center;
+    }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 12px;
+    }
+    .card {
+      background: var(--cream-100);
+      border: 1px solid #E2CFBC;
+      border-radius: 18px;
+      padding: 20px;
+    }
+    .card h3 {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--forest-800);
+      margin-bottom: 8px;
+    }
+    .card p {
+      font-size: 13px;
+      margin-bottom: 0;
+      color: #6B4D36;
+    }
+    .stat-number {
+      font-size: 38px;
+      font-weight: 900;
+      color: var(--forest-700);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .controls {
+      position: absolute;
+      bottom: 24px;
+      right: 36px;
+      display: flex;
+      gap: 10px;
+      z-index: 10;
+    }
+    .btn {
+      background: var(--forest-700);
+      color: #fff;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .btn:hover { background: var(--forest-600); }
+    .slide-number {
+      position: absolute;
+      bottom: 28px;
+      left: 36px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #A68B75;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      font-size: 13px;
+    }
+    th, td {
+      padding: 10px 12px;
+      text-align: left;
+      border-bottom: 1px solid #E2CFBC;
+    }
+    th {
+      background: var(--forest-700);
+      color: #fff;
+      font-weight: 700;
+      border: none;
+    }
+    th:first-child { border-top-left-radius: 10px; }
+    th:last-child { border-top-right-radius: 10px; }
+  </style>
+</head>
+<body>
+
+  <div class="deck-container">
+    <!-- Slide 1: Cover -->
+    <div class="slide active">
+      <div class="badge">🐾 Web3 Public Good Registry</div>
+      <h1>Paw<span class="accent">Shelter</span></h1>
+      <p style="font-size: 20px; font-weight: 600; color: var(--forest-600);">"Every Paw Deserves a Home."</p>
+      <p style="max-width: 650px; margin-top: 10px;">
+        A decentralized pet adoption platform where rescue animals find forever homes directly on-chain. Zero backend. Zero tokens or NFTs. 100% verified on Botchain Testnet.
+      </p>
+      <div style="margin-top: auto; display: flex; gap: 20px; font-size: 13px; font-weight: 600; color: var(--warm-brown);">
+        <span>Chain ID: 968 (Botchain)</span>
+        <span>•</span>
+        <span>Verified Smart Contract</span>
+        <span>•</span>
+        <span>Next.js 14 App</span>
+      </div>
+    </div>
+
+    <!-- Slide 2: The Problem -->
+    <div class="slide">
+      <div class="badge">The Problem</div>
+      <h2>The Broken Animal Rescue Landscape</h2>
+      <div class="grid-3">
+        <div class="card">
+          <div style="font-size: 28px; margin-bottom: 8px;">🏢</div>
+          <h3>Centralized Walled Gardens</h3>
+          <p>Adoption portals hide fees, monetize user data, and keep animal records locked in fragmented proprietary databases.</p>
+        </div>
+        <div class="card">
+          <div style="font-size: 28px; margin-bottom: 8px;">⚠️</div>
+          <h3>Adoption & Puppy Scams</h3>
+          <p>Over $3M is lost annually to online deposit scams and fraudulent pet-flipping with no verifiable owner audit trail.</p>
+        </div>
+        <div class="card">
+          <div style="font-size: 28px; margin-bottom: 8px;">📉</div>
+          <h3>Speculative Web3 Failures</h3>
+          <p>Past crypto pet attempts focused on NFT breeding games and token dumping rather than saving real-world rescue animals.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 3: The Solution -->
+    <div class="slide">
+      <div class="badge">The Solution</div>
+      <h2>PawShelter: Trustless Pet Adoption</h2>
+      <div class="grid-2">
+        <div>
+          <p><strong>PawShelter</strong> returns blockchain technology to its fundamental promise: public verifiability, tamper-proof audit trails, and elimination of middlemen.</p>
+          <ul style="padding-left: 20px; color: var(--warm-brown); font-size: 14px; line-height: 1.8;">
+            <li><strong>100% On-Chain State Machine:</strong> Available → Pending → Adopted</li>
+            <li><strong>Direct Human Connection:</strong> Rescuer-to-adopter application flow</li>
+            <li><strong>Anti-Abuse Protections:</strong> Prevents self-adoption and duplicate approvals</li>
+            <li><strong>Zero Speculation:</strong> Focused entirely on verified animal rehoming</li>
+          </ul>
+        </div>
+        <div class="card" style="background: var(--forest-700); color: #fff; border: none;">
+          <h3 style="color: #fff; font-size: 20px; margin-bottom: 12px;">Verified on Botchain</h3>
+          <p style="color: #D3E5D8; font-size: 13px; line-height: 1.6;">
+            Contract Address:<br>
+            <code style="background: rgba(0,0,0,0.3); padding: 4px 8px; border-radius: 6px; font-size: 11px; word-break: break-all; color: #FAF7F2; display: block; margin-top: 6px;">0x4Dc528244A916a8ed887D2F5d22a0500237aA7cb</code>
+          </p>
+          <p style="color: #D3E5D8; font-size: 13px; margin-top: 10px;">
+            Audited with 17 passing Hardhat unit tests & verified on scan.bohr.life.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 4: Market Opportunity -->
+    <div class="slide">
+      <div class="badge">Market Opportunity</div>
+      <h2>A Massive, Passionate Global Ecosystem</h2>
+      <div class="grid-3" style="margin-top: 20px;">
+        <div class="card" style="text-align: center;">
+          <div class="stat-number">6.3M+</div>
+          <h3>Rescue Animals / Year</h3>
+          <p>Enter animal shelters in the United States alone; tens of millions globally.</p>
+        </div>
+        <div class="card" style="text-align: center;">
+          <div class="stat-number">$147B</div>
+          <h3>Pet Industry Spend</h3>
+          <p>Annual expenditure across veterinary care, food, and adoption supplies.</p>
+        </div>
+        <div class="card" style="text-align: center;">
+          <div class="stat-number">$3.5B+</div>
+          <h3>Charitable Donations</h3>
+          <p>Given annually to animal rescue charities seeking verifiable impact metrics.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 5: Product Walkthrough -->
+    <div class="slide">
+      <div class="badge">Product Experience</div>
+      <h2>Simple, Modern, Delightful</h2>
+      <div class="grid-3" style="margin-top: 10px;">
+        <div class="card">
+          <h3>1. Publish Listing</h3>
+          <p>Owners input pet name, species, age, photo, and story directly to the Botchain smart contract.</p>
+        </div>
+        <div class="card">
+          <h3>2. Express Interest</h3>
+          <p>Adopters submit household details and contact info on-chain without sharing sensitive data publicly.</p>
+        </div>
+        <div class="card">
+          <h3>3. Finalize Adoption</h3>
+          <p>The owner approves the best fit. Once handed over, the milestone is permanently sealed on-chain.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 6: Competitive Advantage -->
+    <div class="slide">
+      <div class="badge">Comparison</div>
+      <h2>Why PawShelter Wins</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>Web2 Portals (Petfinder, Craigslist)</th>
+            <th>Speculative NFT Projects</th>
+            <th>PawShelter</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Data Storage</strong></td>
+            <td>Centralized Corporate DB</td>
+            <td>Centralized off-chain metadata</td>
+            <td><strong class="accent">100% On-Chain</strong></td>
+          </tr>
+          <tr>
+            <td><strong>Adoption Verification</strong></td>
+            <td>Unverified / Manual</td>
+            <td>None (Trading focus)</td>
+            <td><strong class="accent">Smart Contract Handshake</strong></td>
+          </tr>
+          <tr>
+            <td><strong>Financial Speculation</strong></td>
+            <td>High Ad Clutter</td>
+            <td>High Token Volatility</td>
+            <td><strong class="accent">Zero Tokens / Pure Utility</strong></td>
+          </tr>
+          <tr>
+            <td><strong>Audit Trail</strong></td>
+            <td>Easily Altered or Deleted</td>
+            <td>Speculative NFT transfers</td>
+            <td><strong class="accent">Permanent Immutable Milestones</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Slide 7: Technical Architecture -->
+    <div class="slide">
+      <div class="badge">Architecture</div>
+      <h2>Built Clean. Built to Last.</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Frontend Stack</h3>
+          <ul style="padding-left: 20px; font-size: 13px; line-height: 1.8; color: var(--warm-brown);">
+            <li>Next.js 14 App Router (Single Webpage)</li>
+            <li>TypeScript & Tailwind CSS</li>
+            <li>Wagmi v2 & Viem for Web3 RPC queries</li>
+            <li>MetaMask & Injected Wallet support</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Smart Contract Stack</h3>
+          <ul style="padding-left: 20px; font-size: 13px; line-height: 1.8; color: var(--warm-brown);">
+            <li>Solidity 0.8.20 (`PawShelter.sol`)</li>
+            <li>Hardhat 2 test suite (17/17 passing)</li>
+            <li>Botchain Testnet (Chain ID 968)</li>
+            <li>Zero dependencies or token contracts</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 8: Sustainability -->
+    <div class="slide">
+      <div class="badge">Business Model</div>
+      <h2>Sustainable Public Good Infrastructure</h2>
+      <div class="grid-3" style="margin-top: 10px;">
+        <div class="card">
+          <h3>Voluntary Foster Tips</h3>
+          <p>Adopters can optionally tip foster families in native BOHR upon successful adoption handover.</p>
+        </div>
+        <div class="card">
+          <h3>Shelter Verification Grants</h3>
+          <p>Ecosystem grants from animal DAOs and public goods funds (Gitcoin, Optimism RetroPGF).</p>
+        </div>
+        <div class="card">
+          <h3>Corporate Sponsorships</h3>
+          <p>Pet brands and veterinary networks sponsoring adoption medical kits with verifiable outcomes.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 9: Roadmap -->
+    <div class="slide">
+      <div class="badge">Milestones</div>
+      <h2>Execution Roadmap</h2>
+      <div class="grid-3" style="margin-top: 10px;">
+        <div class="card">
+          <h3>Phase 1 (Live Now)</h3>
+          <p>• PawShelter.sol deployed on Botchain<br>• One-page Web3 App live<br>• 17 passing tests & verified contract</p>
+        </div>
+        <div class="card">
+          <h3>Phase 2 (Q2 2026)</h3>
+          <p>• IPFS integration for medical records<br>• Soulbound badges for verified shelters<br>• Multi-chain expansion</p>
+        </div>
+        <div class="card">
+          <h3>Phase 3 (Q3 2026)</h3>
+          <p>• Mobile Progressive Web App (PWA)<br>• Automated adoption push notifications<br>• Rescuer micro-grant vault</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 10: Call to Action -->
+    <div class="slide">
+      <div class="badge">Get Involved</div>
+      <h1>Join the Rescue Revolution</h1>
+      <p style="font-size: 18px; color: var(--forest-600); font-weight: 700; margin-bottom: 20px;">
+        "Find a Friend. Give Them a Home."
+      </p>
+      <div class="card" style="background: var(--cream-100); border: 2px dashed #C7A88D; padding: 24px;">
+        <p style="margin-bottom: 8px;"><strong>🌐 Live Explorer:</strong> <a href="https://scan.bohr.life/address/0x4Dc528244A916a8ed887D2F5d22a0500237aA7cb" style="color: var(--terracotta);">scan.bohr.life/address/0x4Dc528244A916a8ed887D2F5d22a0500237aA7cb</a></p>
+        <p style="margin-bottom: 8px;"><strong>💻 GitHub Repository:</strong> <a href="https://github.com/liljhnxn/pawshelter" style="color: var(--terracotta);">github.com/liljhnxn/pawshelter</a></p>
+        <p style="margin-bottom: 0;"><strong>🐾 Local App:</strong> <a href="http://localhost:3000" style="color: var(--terracotta);">http://localhost:3000</a></p>
+      </div>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <div class="slide-number" id="slideNum">Slide 1 / 10</div>
+    <div class="controls">
+      <button class="btn" id="prevBtn" onclick="prevSlide()">← Prev</button>
+      <button class="btn" id="nextBtn" onclick="nextSlide()">Next →</button>
+    </div>
+  </div>
+
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const slideNum = document.getElementById('slideNum');
+
+    function showSlide(index) {
+      slides.forEach((s, i) => {
+        s.classList.toggle('active', i === index);
+      });
+      slideNum.textContent = `Slide ${index + 1} / ${slides.length}`;
+      document.getElementById('prevBtn').disabled = index === 0;
+      document.getElementById('nextBtn').disabled = index === slides.length - 1;
+    }
+
+    function nextSlide() {
+      if (currentSlide < slides.length - 1) {
+        currentSlide++;
+        showSlide(currentSlide);
+      }
+    }
+
+    function prevSlide() {
+      if (currentSlide > 0) {
+        currentSlide--;
+        showSlide(currentSlide);
+      }
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === ' ') nextSlide();
+      if (e.key === 'ArrowLeft') prevSlide();
+    });
+
+    showSlide(0);
+  </script>
+</body>
+</html>
