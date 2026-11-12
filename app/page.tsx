@@ -450,30 +450,103 @@ export default function Home() {
               )}
             </div>
           )}
+          {/* Ecosystem / Network Info Card */}
+          <div className="mt-16 p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-forest-800 via-forest-700 to-forest-900 text-cream-50 shadow-card border border-forest-600/40 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-80 h-80 bg-terracotta-500/10 rounded-full blur-3xl pointer-events-none" />
+            <div className="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+              <div className="space-y-2">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest-600/60 border border-forest-500/40 text-xs font-bold text-cream-100">
+                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
+                  <span>BOT Chain Ecosystem</span>
+                </div>
+                <h3 className="text-xl sm:text-2xl font-black text-cream-50 tracking-tight">
+                  Powered by BOT Chain Mainnet
+                </h3>
+                <p className="text-xs sm:text-sm text-forest-100/90 max-w-xl leading-relaxed">
+                  PawShelter is built on BOT Chain (Chain ID: 677). Every pet listing, adoption interest record, and verified handover is immutably stored on the BOT Chain ledger.
+                </p>
+              </div>
+
+              <div className="flex flex-wrap items-center gap-3">
+                <a
+                  href="https://botchain.ai"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-cream-50 text-forest-900 hover:bg-cream-100 font-bold text-xs shadow-sm transition-all"
+                >
+                  <span>BOT Chain Website</span>
+                  <ExternalLink className="w-3.5 h-3.5 text-forest-700" />
+                </a>
+                <a
+                  href="https://scan.botchain.ai"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-forest-600/70 hover:bg-forest-600 text-cream-50 border border-forest-500/50 font-bold text-xs shadow-sm transition-all"
+                >
+                  <span>BOT Chain Explorer</span>
+                  <ExternalLink className="w-3.5 h-3.5 text-cream-200" />
+                </a>
+                <a
+                  href={`https://scan.botchain.ai/address/${PAWSHELTER_CONTRACT_ADDRESS}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-terracotta-500 hover:bg-terracotta-600 text-white font-bold text-xs shadow-sm transition-all"
+                >
+                  <span>Verified Contract</span>
+                  <ExternalLink className="w-3.5 h-3.5" />
+                </a>
+              </div>
+            </div>
+          </div>
         </section>
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-warmBrown-200/80 bg-cream-100/90 py-10 mt-auto">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-warmBrown-700">
-          <div className="flex items-center gap-2">
-            <span className="text-lg">🐾</span>
-            <span className="font-bold text-forest-950">PawShelter</span>
-            <span>—</span>
-            <span className="italic">Every Paw Deserves a Home.</span>
+      <footer className="border-t border-warmBrown-200/80 bg-cream-100/95 py-10 mt-auto">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-warmBrown-700">
+          <div className="flex items-center gap-3">
+            <div className="w-9 h-9 rounded-xl bg-forest-700 text-cream-50 flex items-center justify-center font-bold shadow-sm">
+              🐾
+            </div>
+            <div>
+              <div className="font-extrabold text-sm text-forest-950">PawShelter</div>
+              <p className="text-[11px] text-warmBrown-600 italic">Every Paw Deserves a Home.</p>
+            </div>
           </div>
-          <div className="flex items-center gap-4">
+
+          {/* BOT Chain official links */}
+          <div className="flex flex-wrap items-center justify-center gap-6 font-semibold">
+            <a
+              href="https://botchain.ai"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-forest-950 hover:underline transition-colors flex items-center gap-1.5"
+            >
+              <span>BOT Chain Website</span>
+              <ExternalLink className="w-3 h-3 text-terracotta-500" />
+            </a>
+            <span>•</span>
             <a
               href="https://scan.botchain.ai"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-forest-950 hover:underline transition-colors flex items-center gap-1"
+              className="hover:text-forest-950 hover:underline transition-colors flex items-center gap-1.5"
             >
-              <span>Botchain Explorer</span>
+              <span>BOT Chain Explorer</span>
+              <ExternalLink className="w-3 h-3 text-terracotta-500" />
+            </a>
+            <span>•</span>
+            <a
+              href={`https://scan.botchain.ai/address/${PAWSHELTER_CONTRACT_ADDRESS}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-mono text-terracotta-600 hover:underline flex items-center gap-1"
+            >
+              <span>Contract: {PAWSHELTER_CONTRACT_ADDRESS.slice(0, 6)}...{PAWSHELTER_CONTRACT_ADDRESS.slice(-4)}</span>
               <ExternalLink className="w-3 h-3" />
             </a>
             <span>•</span>
-            <span className="text-warmBrown-500">Chain ID: 677</span>
+            <span className="text-warmBrown-500">Chain ID: 677 (BOT)</span>
           </div>
         </div>
       </footer>

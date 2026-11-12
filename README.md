@@ -2,7 +2,7 @@
 
 > **"Every Paw Deserves a Home."**
 
-A decentralized pet adoption listing platform built on the **Botchain Testnet**. PawShelter connects rescue pet owners and prospective adopters directly on-chain with zero intermediaries, transparent listings, and tamper-proof adoption tracking.
+A decentralized pet adoption listing platform built on **BOT Chain Mainnet**. PawShelter connects rescue pet owners and prospective adopters directly on-chain with zero intermediaries, transparent listings, and tamper-proof adoption tracking.
 
 ---
 
@@ -10,22 +10,23 @@ A decentralized pet adoption listing platform built on the **Botchain Testnet**.
 
 - **Exactly One Webpage**: Full-featured single-page application built with Next.js App Router, Tailwind CSS, wagmi, and viem.
 - **Exactly One Smart Contract**: [`PawShelter.sol`](contracts/PawShelter.sol) handles all pet listings, expressions of interest, approvals, and adoption completions.
-- **Zero Backend / Database**: All data is read and written directly to the Botchain blockchain.
+- **Zero Backend / Database**: All data is read and written directly to the BOT Chain blockchain.
 - **No Tokens / NFTs**: Transparent record keeping focused purely on animal welfare and verified adoptions.
-- **MetaMask Integration**: One-click wallet connection and automated network configuration for Botchain Mainnet.
+- **MetaMask Integration**: One-click wallet connection and automated network configuration for BOT Chain Mainnet.
 
 ---
 
-## 🌐 Network Details (Botchain Mainnet)
+## 🌐 Network Details (BOT Chain Mainnet)
 
-| Parameter | Mainnet Value | Testnet Value |
-| :--- | :--- | :--- |
-| **Network Name** | **Botchain Mainnet** | Botchain Testnet |
-| **Chain ID** | `677` | `968` |
-| **Native Currency** | `BOT` (150M Total Supply) | `BOHR` |
-| **RPC Endpoint** | `https://rpc.botchain.ai` | `https://rpc.bohr.life` |
-| **Block Explorer** | [https://scan.botchain.ai](https://scan.botchain.ai) | [https://scan.bohr.life](https://scan.bohr.life) |
-| **Deployed Contract** | [`0xBF87827AF27574Bc6594D18450E1e9b20523B2D6`](https://scan.botchain.ai/address/0xBF87827AF27574Bc6594D18450E1e9b20523B2D6#code) | `0x4Dc528244A916a8ed887D2F5d22a0500237aA7cb` |
+| Parameter | Value |
+| :--- | :--- |
+| **Network Name** | **BOT Chain Mainnet** |
+| **Chain ID** | `677` |
+| **Native Currency** | `BOT` (150 Million Total Supply) |
+| **RPC Endpoint** | [`https://rpc.botchain.ai`](https://rpc.botchain.ai) |
+| **Block Explorer** | [https://scan.botchain.ai](https://scan.botchain.ai) |
+| **BOT Chain Website** | [https://botchain.ai](https://botchain.ai) |
+| **Deployed Contract** | [`0xBF87827AF27574Bc6594D18450E1e9b20523B2D6`](https://scan.botchain.ai/address/0xBF87827AF27574Bc6594D18450E1e9b20523B2D6#code) |
 
 ---
 
@@ -69,8 +70,8 @@ cp .env.example .env
 Update your private key and RPC if deploying:
 ```env
 PRIVATE_KEY=your_private_key_here
-BOTCHAIN_RPC_URL=https://rpc.bohr.life
-NEXT_PUBLIC_PAWSHELTER_CONTRACT_ADDRESS=0x...
+BOTCHAIN_RPC_URL=https://rpc.botchain.ai
+NEXT_PUBLIC_PAWSHELTER_CONTRACT_ADDRESS=0xBF87827AF27574Bc6594D18450E1e9b20523B2D6
 ```
 
 ### 3. Compile & Test Smart Contract
@@ -83,7 +84,7 @@ npm run test
 ```
 
 ### 4. Deploy Smart Contract
-Deploy `PawShelter.sol` to Botchain Testnet:
+Deploy `PawShelter.sol` to BOT Chain Mainnet:
 ```bash
 npm run deploy
 ```

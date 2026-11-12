@@ -25,11 +25,6 @@ const config: HardhatUserConfig = {
     hardhat: {
       chainId: 31337,
     },
-    botchainTestnet: {
-      url: "https://rpc.bohr.life",
-      chainId: 968,
-      accounts: formattedKey ? [formattedKey] : [],
-    },
     botchainMainnet: {
       url: process.env.BOTCHAIN_MAINNET_RPC_URL || "https://rpc.botchain.ai",
       chainId: 677,

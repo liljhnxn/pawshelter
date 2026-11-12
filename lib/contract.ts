@@ -27,30 +27,7 @@ export const botchainMainnet = defineChain({
   testnet: false,
 });
 
-export const botchainTestnet = defineChain({
-  id: 968,
-  name: "Botchain Testnet",
-  nativeCurrency: {
-    decimals: 18,
-    name: "Botchain",
-    symbol: "BOHR",
-  },
-  rpcUrls: {
-    default: {
-      http: ["https://rpc.bohr.life"],
-    },
-    public: {
-      http: ["https://rpc.bohr.life"],
-    },
-  },
-  blockExplorers: {
-    default: {
-      name: "Botchain Explorer",
-      url: "https://scan.bohr.life",
-    },
-  },
-  testnet: true,
-});
+export const botchain = botchainMainnet;
 
 export const PAWSHELTER_CONTRACT_ADDRESS = (process.env.NEXT_PUBLIC_PAWSHELTER_CONTRACT_ADDRESS ||
   "0xBF87827AF27574Bc6594D18450E1e9b20523B2D6") as `0x${string}`;

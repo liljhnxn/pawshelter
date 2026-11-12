@@ -31,7 +31,7 @@ export function Hero({
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-forest-100/80 border border-forest-200/80 text-forest-800 text-xs font-semibold mb-6 shadow-sm">
             <Sparkles className="w-3.5 h-3.5 text-terracotta-500" />
-            <span>Decentralized Pet Adoption on Botchain</span>
+            <span>Decentralized Pet Adoption on BOT Chain</span>
           </div>
 
           {/* Hero Headline */}

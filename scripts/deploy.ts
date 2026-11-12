@@ -5,18 +5,21 @@ import * as path from "path";
 
 async function main() {
   console.log("----------------------------------------------------");
-  console.log("🐾 Deploying PawShelter Contract to Botchain Testnet");
+  console.log("🐾 Deploying PawShelter Contract to Botchain Mainnet");
   console.log("----------------------------------------------------");
 
   const [deployer] = await ethers.getSigners();
   console.log(`Deployer address: ${deployer.address}`);
 
   const balance = await ethers.provider.getBalance(deployer.address);
-  console.log(`Deployer balance: ${ethers.formatEther(balance)} ETH`);
+  console.log(`Deployer balance: ${ethers.formatEther(balance)} BOT`);
+
+  const feeData = await ethers.provider.getFeeData();
+  const gasPrice = feeData.gasPrice || ethers.parseUnits("20", "gwei");
 
   const PawShelter = await ethers.getContractFactory("PawShelter");
-  console.log("Deploying contract...");
-  const pawShelter = await PawShelter.deploy();
+  console.log("Deploying contract with lowest gas price...");
+  const pawShelter = await PawShelter.deploy({ gasPrice });
 
   await pawShelter.waitForDeployment();
   const contractAddress = await pawShelter.getAddress();
@@ -24,16 +27,17 @@ async function main() {
   console.log("----------------------------------------------------");
   console.log(`✅ PawShelter deployed successfully!`);
   console.log(`Contract Address: ${contractAddress}`);
-  console.log(`Block Explorer: https://scan.bohr.life/address/${contractAddress}`);
+  console.log(`Block Explorer: https://scan.botchain.ai/address/${contractAddress}`);
   console.log("----------------------------------------------------");
 
   // Save the address to a deployed-address.json file for frontend convenience
   const deploymentInfo = {
     address: contractAddress,
-    network: "Botchain Testnet",
-    chainId: 968,
+    network: "Botchain Mainnet",
+    chainId: 677,
     deployedAt: new Date().toISOString(),
     deployer: deployer.address,
+    explorer: `https://scan.botchain.ai/address/${contractAddress}`,
   };
 
   const outputPath = path.join(process.cwd(), "deployed-address.json");

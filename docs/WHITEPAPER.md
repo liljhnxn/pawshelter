@@ -2,9 +2,10 @@
 ## Technical Whitepaper v1.0
 **"Every Paw Deserves a Home."**
 
-* **Mainnet Network**: Botchain Mainnet (Chain ID: `677`, Native Token: `BOT`)
-* **Mainnet Contract Address**: [`0xBF87827AF27574Bc6594D18450E1e9b20523B2D6`](https://scan.botchain.ai/address/0xBF87827AF27574Bc6594D18450E1e9b20523B2D6#code)
-* **Testnet Contract Address**: [`0x4Dc528244A916a8ed887D2F5d22a0500237aA7cb`](https://scan.bohr.life/address/0x4Dc528244A916a8ed887D2F5d22a0500237aA7cb#code)
+* **Network**: BOT Chain Mainnet (Chain ID: `677`, Native Token: `BOT`)
+* **Contract Address**: [`0xBF87827AF27574Bc6594D18450E1e9b20523B2D6`](https://scan.botchain.ai/address/0xBF87827AF27574Bc6594D18450E1e9b20523B2D6#code)
+* **BOT Chain Website**: [https://botchain.ai](https://botchain.ai)
+* **BOT Chain Explorer**: [https://scan.botchain.ai](https://scan.botchain.ai)
 * **Open Source Repository**: [https://github.com/liljhnxn/pawshelter](https://github.com/liljhnxn/pawshelter)
 
 ---
@@ -13,7 +14,7 @@
 
 Every year, an estimated 6.3 million companion animals enter animal shelters in the United States alone, and tens of millions more experience displacement globally. Traditional pet adoption platforms suffer from heavy centralization, opaque administrative fees, fragmented databases, and fraudulent "pet-flipping" scams.
 
-**PawShelter** is a trustless, decentralized pet adoption registry built on the Botchain Testnet. By anchoring every pet listing, adoption expression of interest, owner approval, and finalized adoption on-chain, PawShelter eliminates intermediaries, removes unnecessary platform commissions, and provides an immutable public record of every rescue animal’s journey to a forever home.
+**PawShelter** is a trustless, decentralized pet adoption registry built on the BOT Chain Mainnet. By anchoring every pet listing, adoption expression of interest, owner approval, and finalized adoption on-chain, PawShelter eliminates intermediaries, removes unnecessary platform commissions, and provides an immutable public record of every rescue animal’s journey to a forever home.
 
 PawShelter intentionally rejects speculative tokenomics and NFT financialization. It uses blockchain technology for its core purpose: **tamper-proof transparency, public verifiability, and permanent data availability**.
 
@@ -74,7 +75,7 @@ PawShelter provides a minimalist, tamper-resistant, public good infrastructure f
 ### 4.1 System Overview
 PawShelter is designed with strict architectural constraints:
 * **Single Webpage Frontend**: Built with Next.js 14 App Router, TypeScript, and Tailwind CSS.
-* **Single Smart Contract**: [`PawShelter.sol`](contracts/PawShelter.sol) deployed on Botchain Testnet.
+* **Single Smart Contract**: [`PawShelter.sol`](contracts/PawShelter.sol) deployed on BOT Chain Mainnet.
 * **Zero Centralized Backend / Database**: No servers, no Firebase, no PostgreSQL. All state is queried directly from RPC nodes via `viem` and `wagmi`.
 
 ### 4.2 Smart Contract Architecture (`PawShelter.sol`)
@@ -134,7 +135,7 @@ struct AdoptionInterest {
 * **Reentrancy Immunity**: All state modifications follow the Checks-Effects-Interactions (CEI) pattern. The contract holds zero native currency or tokens, making value-drain attacks impossible.
 * **Access Control**: Strictly verified via `msg.sender == pet.owner` and `msg.sender == pet.approvedAdopter`.
 * **Testing Rigor**: 17 automated tests run through Hardhat covering boundary limits, permission violations, duplicate prevention, and edge cases.
-* **Contract Verification**: Source code is verified and auditable on [Botchain Explorer](https://scan.bohr.life/address/0x4Dc528244A916a8ed887D2F5d22a0500237aA7cb#code).
+* **Contract Verification**: Source code is verified and auditable on [BOT Chain Explorer](https://scan.botchain.ai/address/0xBF87827AF27574Bc6594D18450E1e9b20523B2D6#code).
 
 ---
 
@@ -142,16 +143,16 @@ struct AdoptionInterest {
 
 * **Palette**: Warm Cream (`#FAF7F2`), Forest Green (`#1E3A2B`), Warm Earth Brown (`#8B5E3C`), and Subtle Terracotta (`#E07A5F`).
 * **Accessibility**: Clean rounded cards, high-contrast type, intuitive modal flows, and responsive mobile-first grid.
-* **Web3 Friction Reduction**: Automatic Botchain network detection, prompt chain-switching, native BOHR balance display, and real-time transaction status toasts.
+* **Web3 Friction Reduction**: Automatic BOT Chain network detection, prompt chain-switching, native BOT balance display, and real-time transaction status toasts.
 
 ---
 
 ## 7. Roadmap
 
-* **Phase 1 (Completed)**: Core smart contract deployment, test suite, and one-page Web3 application on Botchain Testnet.
+* **Phase 1 (Completed)**: Core smart contract deployment, test suite, and one-page Web3 application on BOT Chain Mainnet.
 * **Phase 2**: Decentralized media storage via IPFS/Filecoin for high-resolution veterinary and vaccination documents.
 * **Phase 3**: Soulbound Attestation Tokens (EAS / SBT) for verified shelters and repeat foster homes.
-* **Phase 4**: Direct BOHR micro-donations directly to listing owners upon verified adoption completion.
+* **Phase 4**: Direct BOT micro-donations directly to listing owners upon verified adoption completion.
 
 ---
 

@@ -60,9 +60,9 @@
 * **Smart Contract**: Exactly one Solidity contract ([`PawShelter.sol`](contracts/PawShelter.sol)) compiled with Solidity `0.8.20`.
 * **Frontend**: Next.js 14 App Router, TypeScript, Tailwind CSS.
 * **Web3 Integration**: `wagmi` v2 + `viem` + MetaMask / Injected Provider.
-* **Network**: Botchain Testnet (`rpc.bohr.life`, Chain ID: 968).
+* **Network**: BOT Chain Mainnet (`rpc.botchain.ai`, Chain ID: 677, Native Token: BOT).
 * **Audited Rigor**: 17 automated tests passing with 100% success.
-* **Block Explorer Verified**: Fully verified code on [scan.bohr.life](https://scan.bohr.life/address/0x4Dc528244A916a8ed887D2F5d22a0500237aA7cb#code).
+* **Block Explorer Verified**: Fully verified code on [scan.botchain.ai](https://scan.botchain.ai/address/0xBF87827AF27574Bc6594D18450E1e9b20523B2D6#code).
 
 ---
 
@@ -71,17 +71,17 @@
 | Feature | Centralized Sites (Petfinder, Craigslist) | Typical Web3 Pet Projects | PawShelter |
 | :--- | :--- | :--- | :--- |
 | **Data Ownership** | Corporate Silos | Centralized metadata | 100% On-Chain |
-| **Audit Trail** | None / Easily deleted | Often just static NFTs | Immutable Lifecycle Events |
-| **Speculation** | High Ad Clutter | Token Dump Risks | Zero Tokens, Pure Impact |
-| **Direct Peer-to-Peer** | Walled Garden | Discord Chaos | Smart Contract Handshake |
-| **Transaction Cost** | High Commissions | Heavy gas fees | Micro-gas on Botchain |
+| **Adoption Verification** | Unverified / Manual | None (Trading focus) | <strong class="accent">Smart Contract Handshake</strong> |
+| **Speculation** | High Ad Clutter | Token Dump Risks | <strong class="accent">Zero Tokens / Pure Utility</strong> |
+| **Direct Peer-to-Peer** | Walled Garden | Discord Chaos | <strong class="accent">Smart Contract Handshake</strong> |
+| **Transaction Cost** | High Commissions | Heavy gas fees | Micro-gas on BOT Chain |
 
 ---
 
 ## Slide 8: Business & Sustainability Model
 ### How PawShelter Remains Free & Self-Sustaining
 1. **Public Good Infrastructure**: Core listing and adoption remain permanently free.
-2. **Voluntary Rescuer Tips**: Optional on-chain micro-tips to support local foster homes upon adoption finalization.
+2. **Voluntary Rescuer Tips**: Optional on-chain micro-tips in BOT to support local foster homes upon adoption finalization.
 3. **Shelter Verification Grants**: Partnerships with animal welfare DAOs and municipal animal shelters.
 4. **Corporate Social Responsibility (CSR)**: Web3 sponsors funding pet medical sponsorships verified through adoption milestones.
 
@@ -89,23 +89,24 @@
 
 ## Slide 9: Roadmap
 * **Q1 2026 (Completed)**:
-  * Deploy & verify `PawShelter.sol` on Botchain Testnet.
+  * Deploy & verify `PawShelter.sol` on BOT Chain Mainnet.
   * Launch single-page Web3 App with full listing, application, and approval flow.
   * Comprehensive 17-test suite & automated deployment pipeline.
 * **Q2 2026**:
   * Decentralized IPFS storage for medical records and vaccination passports.
   * Verified Shelter Badges via on-chain attestations.
 * **Q3 2026**:
-  * Direct foster micro-donations in BOHR.
+  * Direct foster micro-donations in BOT.
   * Mobile progressive web app (PWA) with push notifications for new rescue listings.
 
 ---
 
 ## Slide 10: The Team & Call to Action
 * **Tagline**: *"Find a Friend. Give Them a Home."*
-* **Live Demo**: [http://localhost:3000](http://localhost:3000)
+* **BOT Chain Website**: [https://botchain.ai](https://botchain.ai)
+* **BOT Chain Explorer**: [https://scan.botchain.ai](https://scan.botchain.ai)
+* **Mainnet Contract**: [https://scan.botchain.ai/address/0xBF87827AF27574Bc6594D18450E1e9b20523B2D6](https://scan.botchain.ai/address/0xBF87827AF27574Bc6594D18450E1e9b20523B2D6)
 * **GitHub Repository**: [https://github.com/liljhnxn/pawshelter](https://github.com/liljhnxn/pawshelter)
-* **Contract on Explorer**: [https://scan.bohr.life/address/0x4Dc528244A916a8ed887D2F5d22a0500237aA7cb](https://scan.bohr.life/address/0x4Dc528244A916a8ed887D2F5d22a0500237aA7cb)
 
-**Join us in revolutionizing pet rescue on Botchain.**
+**Join us in revolutionizing pet rescue on BOT Chain.**
 
