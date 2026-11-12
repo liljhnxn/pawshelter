@@ -25,23 +25,44 @@ const config: HardhatUserConfig = {
     hardhat: {
       chainId: 31337,
     },
-    botchain: {
-      url: process.env.BOTCHAIN_RPC_URL || "https://rpc.bohr.life",
+    botchainTestnet: {
+      url: "https://rpc.bohr.life",
       chainId: 968,
       accounts: formattedKey ? [formattedKey] : [],
+    },
+    botchainMainnet: {
+      url: process.env.BOTCHAIN_MAINNET_RPC_URL || "https://rpc.botchain.ai",
+      chainId: 677,
+      accounts: formattedKey ? [formattedKey] : [],
+      gasPrice: 20000000000, // 20 Gwei minimum, lowest possible gas fee
+    },
+    botchain: {
+      url: process.env.BOTCHAIN_RPC_URL || "https://rpc.botchain.ai",
+      chainId: 677,
+      accounts: formattedKey ? [formattedKey] : [],
+      gasPrice: 20000000000,
     },
   },
   etherscan: {
     apiKey: {
+      botchainMainnet: "empty",
       botchain: "empty",
     },
     customChains: [
       {
-        network: "botchain",
-        chainId: 968,
+        network: "botchainMainnet",
+        chainId: 677,
         urls: {
-          apiURL: "https://scan.bohr.life/api",
-          browserURL: "https://scan.bohr.life",
+          apiURL: "https://scan.botchain.ai/api",
+          browserURL: "https://scan.botchain.ai",
+        },
+      },
+      {
+        network: "botchain",
+        chainId: 677,
+        urls: {
+          apiURL: "https://scan.botchain.ai/api",
+          browserURL: "https://scan.botchain.ai",
         },
       },
     ],

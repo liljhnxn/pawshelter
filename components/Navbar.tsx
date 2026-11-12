@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { useAccount, useConnect, useDisconnect, useChainId, useSwitchChain, useBalance } from "wagmi";
-import { botchainTestnet } from "@/lib/contract";
+import { botchainMainnet } from "@/lib/contract";
 import { Heart, Plus, Wallet, LogOut, ChevronDown, Check, AlertTriangle, ExternalLink } from "lucide-react";
 
 interface NavbarProps {
@@ -29,10 +29,10 @@ export function Navbar({
 
   const { data: balanceData } = useBalance({
     address,
-    chainId: botchainTestnet.id,
+    chainId: botchainMainnet.id,
   });
 
-  const isWrongNetwork = isConnected && chainId !== botchainTestnet.id;
+  const isWrongNetwork = isConnected && chainId !== botchainMainnet.id;
 
   const truncateAddress = (addr: string) => {
     return `${addr.slice(0, 6)}...${addr.slice(-4)}`;
@@ -65,7 +65,7 @@ export function Navbar({
                     Paw<span className="text-terracotta-500">Shelter</span>
                   </span>
                   <span className="hidden sm:inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-semibold bg-forest-100 text-forest-800 border border-forest-200">
-                    Botchain 968
+                    Botchain Mainnet (677)
                   </span>
                 </div>
                 <p className="text-xs font-medium text-warmBrown-600 tracking-wide">
@@ -145,11 +145,11 @@ export function Navbar({
             {/* Network or Wallet Connector */}
             {isWrongNetwork ? (
               <button
-                onClick={() => switchChain({ chainId: botchainTestnet.id })}
+                onClick={() => switchChain({ chainId: botchainMainnet.id })}
                 className="inline-flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-amber-500 text-white font-semibold text-sm hover:bg-amber-600 transition-all shadow-sm animate-pulse"
               >
                 <AlertTriangle className="w-4 h-4" />
-                <span>Switch to Botchain</span>
+                <span>Switch to Mainnet</span>
               </button>
             ) : isConnected && address ? (
               <div className="relative">
@@ -167,7 +167,7 @@ export function Navbar({
                 {walletMenuOpen && (
                   <div className="absolute right-0 mt-2 w-64 rounded-2xl bg-cream-50 border border-warmBrown-200 shadow-modal p-3 z-50 animate-in fade-in zoom-in-95">
                     <div className="p-2 border-b border-warmBrown-100 mb-2">
-                      <p className="text-xs text-warmBrown-600 font-medium">Connected to Botchain</p>
+                      <p className="text-xs text-warmBrown-600 font-medium">Connected to Botchain Mainnet</p>
                       <p className="text-sm font-bold text-forest-900 truncate mt-0.5">
                         {address}
                       </p>
@@ -178,7 +178,7 @@ export function Navbar({
                       )}
                     </div>
                     <a
-                      href={`https://scan.bohr.life/address/${address}`}
+                      href={`https://scan.botchain.ai/address/${address}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center justify-between w-full px-3 py-2 text-xs font-semibold text-forest-800 hover:bg-cream-100 rounded-xl transition-colors mb-1"

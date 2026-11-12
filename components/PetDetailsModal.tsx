@@ -227,7 +227,7 @@ export function PetDetailsModal({
                 <User className="w-4 h-4 text-warmBrown-500" />
                 <span>Owner: </span>
                 <a
-                  href={`https://scan.bohr.life/address/${pet.owner}`}
+                  href={`https://scan.botchain.ai/address/${pet.owner}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-mono text-terracotta-600 hover:underline flex items-center gap-1 font-semibold"

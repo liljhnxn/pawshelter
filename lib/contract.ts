@@ -1,9 +1,34 @@
 import { defineChain } from "viem";
 
-export const BOTCHAIN_CHAIN_ID = 968;
+export const BOTCHAIN_CHAIN_ID = 677;
+
+export const botchainMainnet = defineChain({
+  id: 677,
+  name: "Botchain Mainnet",
+  nativeCurrency: {
+    decimals: 18,
+    name: "Botchain",
+    symbol: "BOT",
+  },
+  rpcUrls: {
+    default: {
+      http: ["https://rpc.botchain.ai"],
+    },
+    public: {
+      http: ["https://rpc.botchain.ai"],
+    },
+  },
+  blockExplorers: {
+    default: {
+      name: "Botchain Explorer",
+      url: "https://scan.botchain.ai",
+    },
+  },
+  testnet: false,
+});
 
 export const botchainTestnet = defineChain({
-  id: BOTCHAIN_CHAIN_ID,
+  id: 968,
   name: "Botchain Testnet",
   nativeCurrency: {
     decimals: 18,
@@ -28,7 +53,7 @@ export const botchainTestnet = defineChain({
 });
 
 export const PAWSHELTER_CONTRACT_ADDRESS = (process.env.NEXT_PUBLIC_PAWSHELTER_CONTRACT_ADDRESS ||
-  "0x0000000000000000000000000000000000000000") as `0x${string}`;
+  "0xBF87827AF27574Bc6594D18450E1e9b20523B2D6") as `0x${string}`;
 
 export const PAWSHELTER_ABI = [
   {

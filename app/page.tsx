@@ -212,11 +212,11 @@ export default function Home() {
           <div className="p-3.5 rounded-2xl bg-cream-100 border border-warmBrown-200/80 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
             <div className="flex items-center gap-2">
               <span className="w-2.5 h-2.5 rounded-full bg-emerald-500" />
-              <span className="font-bold text-forest-900">Botchain Testnet (Chain ID 968)</span>
+              <span className="font-bold text-forest-900">Botchain Mainnet (Chain ID 677)</span>
               <span className="text-warmBrown-500">•</span>
               <span className="text-warmBrown-700 hidden sm:inline">Contract:</span>
               <a
-                href={`https://scan.bohr.life/address/${PAWSHELTER_CONTRACT_ADDRESS}`}
+                href={`https://scan.botchain.ai/address/${PAWSHELTER_CONTRACT_ADDRESS}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-mono text-terracotta-600 hover:underline flex items-center gap-1 font-semibold"
@@ -464,7 +464,7 @@ export default function Home() {
           </div>
           <div className="flex items-center gap-4">
             <a
-              href="https://scan.bohr.life"
+              href="https://scan.botchain.ai"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-forest-950 hover:underline transition-colors flex items-center gap-1"
@@ -473,7 +473,7 @@ export default function Home() {
               <ExternalLink className="w-3 h-3" />
             </a>
             <span>•</span>
-            <span className="text-warmBrown-500">Chain ID: 968</span>
+            <span className="text-warmBrown-500">Chain ID: 677</span>
           </div>
         </div>
       </footer>

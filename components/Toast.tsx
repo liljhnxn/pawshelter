@@ -68,7 +68,7 @@ function ToastItem({
         )}
         {toast.txHash && (
           <a
-            href={`https://scan.bohr.life/tx/${toast.txHash}`}
+            href={`https://scan.botchain.ai/tx/${toast.txHash}`}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1 text-xs text-terracotta-600 hover:text-terracotta-700 underline font-medium mt-1.5"

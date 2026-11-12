@@ -12,19 +12,20 @@ A decentralized pet adoption listing platform built on the **Botchain Testnet**.
 - **Exactly One Smart Contract**: [`PawShelter.sol`](contracts/PawShelter.sol) handles all pet listings, expressions of interest, approvals, and adoption completions.
 - **Zero Backend / Database**: All data is read and written directly to the Botchain blockchain.
 - **No Tokens / NFTs**: Transparent record keeping focused purely on animal welfare and verified adoptions.
-- **MetaMask Integration**: One-click wallet connection and automated network configuration for Botchain Testnet.
+- **MetaMask Integration**: One-click wallet connection and automated network configuration for Botchain Mainnet.
 
 ---
 
-## 🌐 Network Details (Botchain Testnet)
+## 🌐 Network Details (Botchain Mainnet)
 
-| Parameter | Value |
-| :--- | :--- |
-| **Network Name** | Botchain Testnet |
-| **Chain ID** | `968` |
-| **Native Currency** | `BOHR` |
-| **RPC Endpoint** | `https://rpc.bohr.life` |
-| **Block Explorer** | [https://scan.bohr.life](https://scan.bohr.life) |
+| Parameter | Mainnet Value | Testnet Value |
+| :--- | :--- | :--- |
+| **Network Name** | **Botchain Mainnet** | Botchain Testnet |
+| **Chain ID** | `677` | `968` |
+| **Native Currency** | `BOT` (150M Total Supply) | `BOHR` |
+| **RPC Endpoint** | `https://rpc.botchain.ai` | `https://rpc.bohr.life` |
+| **Block Explorer** | [https://scan.botchain.ai](https://scan.botchain.ai) | [https://scan.bohr.life](https://scan.bohr.life) |
+| **Deployed Contract** | [`0xBF87827AF27574Bc6594D18450E1e9b20523B2D6`](https://scan.botchain.ai/address/0xBF87827AF27574Bc6594D18450E1e9b20523B2D6#code) | `0x4Dc528244A916a8ed887D2F5d22a0500237aA7cb` |
 
 ---
 

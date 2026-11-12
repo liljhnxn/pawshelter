@@ -2,8 +2,9 @@
 ## Technical Whitepaper v1.0
 **"Every Paw Deserves a Home."**
 
-* **Network**: Botchain Testnet (Chain ID: `968`)
-* **Smart Contract Address**: [`0x4Dc528244A916a8ed887D2F5d22a0500237aA7cb`](https://scan.bohr.life/address/0x4Dc528244A916a8ed887D2F5d22a0500237aA7cb#code)
+* **Mainnet Network**: Botchain Mainnet (Chain ID: `677`, Native Token: `BOT`)
+* **Mainnet Contract Address**: [`0xBF87827AF27574Bc6594D18450E1e9b20523B2D6`](https://scan.botchain.ai/address/0xBF87827AF27574Bc6594D18450E1e9b20523B2D6#code)
+* **Testnet Contract Address**: [`0x4Dc528244A916a8ed887D2F5d22a0500237aA7cb`](https://scan.bohr.life/address/0x4Dc528244A916a8ed887D2F5d22a0500237aA7cb#code)
 * **Open Source Repository**: [https://github.com/liljhnxn/pawshelter](https://github.com/liljhnxn/pawshelter)
 
 ---
@@ -159,3 +160,4 @@ struct AdoptionInterest {
 PawShelter demonstrates that decentralized ledgers can provide immediate, practical value beyond financial speculation. By treating companion animal welfare as a transparent public registry, PawShelter gives rescue pets the permanence, visibility, and dignity they deserve.
 
 **Every Paw Deserves a Home.**
+

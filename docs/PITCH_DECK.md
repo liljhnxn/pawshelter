@@ -8,8 +8,8 @@
 * **Title**: PawShelter
 * **Tagline**: Every Paw Deserves a Home.
 * **Mission**: Rebuilding animal rescue infrastructure on trustless, verifiable public ledgers.
-* **Network**: Botchain Testnet (Chain ID `968`)
-* **Contract**: `0x4Dc528244A916a8ed887D2F5d22a0500237aA7cb`
+* **Network**: Botchain Mainnet (Chain ID `677`, Native Token: `BOT`)
+* **Contract**: [`0xBF87827AF27574Bc6594D18450E1e9b20523B2D6`](https://scan.botchain.ai/address/0xBF87827AF27574Bc6594D18450E1e9b20523B2D6#code)
 * **Website / Repo**: [github.com/liljhnxn/pawshelter](https://github.com/liljhnxn/pawshelter)
 
 ---

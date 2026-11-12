@@ -1,0 +1,12 @@
+{
+  "address": "0xBF87827AF27574Bc6594D18450E1e9b20523B2D6",
+  "network": "Botchain Mainnet",
+  "chainId": 677,
+  "deployedAt": "2026-11-12T08:41:12.510Z",
+  "deployer": "0x83acc57bb9CDe889b248E9c740F5248637cd89f4",
+  "transactionHash": "0x168fea9286eb102a19c71382f40f0ff3bacdd17d10f83b0c09c55a7fed900789",
+  "gasUsed": "2296459",
+  "gasPriceGwei": "20.0",
+  "totalCostBOT": "0.04592918",
+  "explorer": "https://scan.botchain.ai/address/0xBF87827AF27574Bc6594D18450E1e9b20523B2D6"
+}
