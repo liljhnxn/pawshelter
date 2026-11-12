@@ -60,7 +60,7 @@ A decentralized pet adoption listing platform built on **BOT Chain Mainnet**. Pa
 ### 1. Prerequisites
 - [Node.js](https://nodejs.org/) (v18+ or v20+)
 - MetaMask or any Web3 injected browser wallet
-- Some testnet `BOHR` tokens on Botchain Testnet
+- Some `BOT` tokens on BOT Chain Mainnet for transaction gas
 
 ### 2. Configuration
 Copy `.env.example` to `.env`:

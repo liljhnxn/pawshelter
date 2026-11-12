@@ -212,15 +212,17 @@ export default function Home() {
           <div className="p-3.5 rounded-2xl bg-cream-100 border border-warmBrown-200/80 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
             <div className="flex items-center gap-2">
               <span className="w-2.5 h-2.5 rounded-full bg-emerald-500" />
-              <span className="font-bold text-forest-900">Botchain Mainnet (Chain ID 677)</span>
+              <img src="/botchain-logo.png" alt="BOT Chain" className="w-4 h-4 rounded-sm object-cover inline-block" />
+              <span className="font-bold text-forest-900">BOT Chain Mainnet (Chain ID 677)</span>
               <span className="text-warmBrown-500">•</span>
               <span className="text-warmBrown-700 hidden sm:inline">Contract:</span>
               <a
                 href={`https://scan.botchain.ai/address/${PAWSHELTER_CONTRACT_ADDRESS}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-mono text-terracotta-600 hover:underline flex items-center gap-1 font-semibold"
+                className="font-mono text-terracotta-600 hover:underline flex items-center gap-1.5 font-semibold"
               >
+                <img src="/botchain-logo.png" alt="BOT Chain" className="w-3.5 h-3.5 rounded-sm object-cover inline-block" />
                 {PAWSHELTER_CONTRACT_ADDRESS.slice(0, 10)}...{PAWSHELTER_CONTRACT_ADDRESS.slice(-8)}
                 <ExternalLink className="w-3 h-3" />
               </a>
@@ -474,6 +476,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-cream-50 text-forest-900 hover:bg-cream-100 font-bold text-xs shadow-sm transition-all"
                 >
+                  <img src="/botchain-logo.png" alt="BOT Chain" className="w-4 h-4 rounded-sm object-cover" />
                   <span>BOT Chain Website</span>
                   <ExternalLink className="w-3.5 h-3.5 text-forest-700" />
                 </a>
@@ -483,6 +486,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-forest-600/70 hover:bg-forest-600 text-cream-50 border border-forest-500/50 font-bold text-xs shadow-sm transition-all"
                 >
+                  <img src="/botchain-logo.png" alt="BOT Chain" className="w-4 h-4 rounded-sm object-cover" />
                   <span>BOT Chain Explorer</span>
                   <ExternalLink className="w-3.5 h-3.5 text-cream-200" />
                 </a>
@@ -492,6 +496,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-terracotta-500 hover:bg-terracotta-600 text-white font-bold text-xs shadow-sm transition-all"
                 >
+                  <img src="/botchain-logo.png" alt="BOT Chain" className="w-4 h-4 rounded-sm object-cover" />
                   <span>Verified Contract</span>
                   <ExternalLink className="w-3.5 h-3.5" />
                 </a>
@@ -522,6 +527,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="hover:text-forest-950 hover:underline transition-colors flex items-center gap-1.5"
             >
+              <img src="/botchain-logo.png" alt="BOT Chain" className="w-3.5 h-3.5 rounded-sm object-cover inline-block" />
               <span>BOT Chain Website</span>
               <ExternalLink className="w-3 h-3 text-terracotta-500" />
             </a>
@@ -532,6 +538,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="hover:text-forest-950 hover:underline transition-colors flex items-center gap-1.5"
             >
+              <img src="/botchain-logo.png" alt="BOT Chain" className="w-3.5 h-3.5 rounded-sm object-cover inline-block" />
               <span>BOT Chain Explorer</span>
               <ExternalLink className="w-3 h-3 text-terracotta-500" />
             </a>
@@ -540,13 +547,17 @@ export default function Home() {
               href={`https://scan.botchain.ai/address/${PAWSHELTER_CONTRACT_ADDRESS}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="font-mono text-terracotta-600 hover:underline flex items-center gap-1"
+              className="font-mono text-terracotta-600 hover:underline flex items-center gap-1.5"
             >
+              <img src="/botchain-logo.png" alt="BOT Chain" className="w-3.5 h-3.5 rounded-sm object-cover inline-block" />
               <span>Contract: {PAWSHELTER_CONTRACT_ADDRESS.slice(0, 6)}...{PAWSHELTER_CONTRACT_ADDRESS.slice(-4)}</span>
               <ExternalLink className="w-3 h-3" />
             </a>
             <span>•</span>
-            <span className="text-warmBrown-500">Chain ID: 677 (BOT)</span>
+            <span className="text-warmBrown-500 flex items-center gap-1">
+              <img src="/botchain-logo.png" alt="BOT Chain" className="w-3 h-3 rounded-sm object-cover inline-block" />
+              <span>Chain ID: 677 (BOT)</span>
+            </span>
           </div>
         </div>
       </footer>

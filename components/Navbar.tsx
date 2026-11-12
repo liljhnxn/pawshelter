@@ -64,8 +64,9 @@ export function Navbar({
                   <span className="font-extrabold text-2xl text-forest-900 tracking-tight">
                     Paw<span className="text-terracotta-500">Shelter</span>
                   </span>
-                  <span className="hidden sm:inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-semibold bg-forest-100 text-forest-800 border border-forest-200">
-                    Botchain Mainnet (677)
+                  <span className="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-semibold bg-forest-100 text-forest-800 border border-forest-200">
+                    <img src="/botchain-logo.png" alt="BOT Chain" className="w-3 h-3 rounded-sm object-cover inline-block" />
+                    <span>BOT Chain Mainnet (677)</span>
                   </span>
                 </div>
                 <p className="text-xs font-medium text-warmBrown-600 tracking-wide">
@@ -178,12 +179,27 @@ export function Navbar({
                       )}
                     </div>
                     <a
+                      href="https://botchain.ai"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-between w-full px-3 py-2 text-xs font-semibold text-forest-800 hover:bg-cream-100 rounded-xl transition-colors mb-1"
+                    >
+                      <span className="flex items-center gap-1.5">
+                        <img src="/botchain-logo.png" alt="BOT Chain" className="w-3.5 h-3.5 rounded-sm object-cover" />
+                        <span>BOT Chain Website</span>
+                      </span>
+                      <ExternalLink className="w-3.5 h-3.5 text-warmBrown-500" />
+                    </a>
+                    <a
                       href={`https://scan.botchain.ai/address/${address}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center justify-between w-full px-3 py-2 text-xs font-semibold text-forest-800 hover:bg-cream-100 rounded-xl transition-colors mb-1"
                     >
-                      <span>View on Explorer</span>
+                      <span className="flex items-center gap-1.5">
+                        <img src="/botchain-logo.png" alt="BOT Chain" className="w-3.5 h-3.5 rounded-sm object-cover" />
+                        <span>BOT Chain Explorer</span>
+                      </span>
                       <ExternalLink className="w-3.5 h-3.5 text-warmBrown-500" />
                     </a>
                     <button
